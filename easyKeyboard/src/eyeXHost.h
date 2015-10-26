@@ -1,8 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "stdafx.h"
-#include "eyex/EyeX.h"
+#include "../include/eyex/EyeX.h"
 #include <vector>
 #include <mutex>
 

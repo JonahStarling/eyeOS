@@ -177,15 +177,20 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    posX = eyex.gazePoint.x; //***COMMENT OUT ON MAC***
-    posY = eyex.gazePoint.y; //***COMMENT OUT ON MAC***
+#ifdef _WIN32
+    posX = eyex.gazePoint.x*.005+posX*.995; //***COMMENT OUT ON MAC***
+    posY = eyex.gazePoint.y*.005+posY*.995; //***COMMENT OUT ON MAC***
+#else
+	posX = mouseX; //***COMMENT OUT ON WIN***
+	posY = mouseY; //***COMMENT OUT ON WIN***
+#endif
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     for (int i = 0; i < vectorOfButtons.size(); i++) {
         vectorOfButtons[i].redrawObject();
-        if (vectorOfButtons[i].eyeOnButton(mouseX, mouseY) && !vectorOfButtons[i].getClicked()) {
+        if (vectorOfButtons[i].eyeOnButton(posX, posY) && !vectorOfButtons[i].getClicked()) {
             cursor.setClicking(true);
             if (cursor.checkClicked()) {
                 vectorOfButtons[i].setClicked(true);
@@ -247,11 +252,11 @@ void ofApp::draw(){
                     vectorOfButtons[i].setValue(vectorOfLabelArrays[currentGrid][i]);
                 }
             }
-        } else if (!vectorOfButtons[i].eyeOnButton(mouseX, mouseY) && vectorOfButtons[i].getClicked()) {
+        } else if (!vectorOfButtons[i].eyeOnButton(posX, posY) && vectorOfButtons[i].getClicked()) {
             vectorOfButtons[i].setClicked(false);
         }
     }
-    //cursor.redrawObject(mouseX,mouseY); ***COMMENTED OUT - UNCOMMENT ON MAC AND COMMENT NEXT LINE***
+    //cursor.redrawObject(posX,posY); ***COMMENTED OUT - UNCOMMENT ON MAC AND COMMENT NEXT LINE***
     cursor.redrawObject(posX, posY);
 }
 

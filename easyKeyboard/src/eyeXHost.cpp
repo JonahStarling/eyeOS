@@ -6,7 +6,6 @@
 #include <mutex>
 #include <cassert>
 #include <cstdint>
-#include "stdafx.h"
 
 
 

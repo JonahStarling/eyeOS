@@ -28,11 +28,13 @@ EyeCursor::EyeCursor(float mouseX, float mouseY):
     //
 }
 
+#define FRAME_RATE_DELAY 100
+
 void EyeCursor::redrawObject(float mouseX, float mouseY) {
-    if (size >= 20) {
+    if (size >= FRAME_RATE_DELAY) {
         clicking = false;
     }
-    if (clicking && size < 20) {
+	if (clicking && size < FRAME_RATE_DELAY) {
         size += 0.1;
         opa += 1;
     } else if (size > 10) {
@@ -49,7 +51,7 @@ void EyeCursor::setClicking(bool state) {
 }
 
 bool EyeCursor::checkClicked() {
-    if (size > 20) {
+	if (size > FRAME_RATE_DELAY) {
         return true;
     } else {
         return false;

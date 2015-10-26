@@ -52,12 +52,15 @@ void EyeButton::setClicked(bool newClick) {clicked = newClick;}
 
 //Other Functions
 void EyeButton::redrawObject() {
+	//self.height - boundingbox.height/2
+	//self.width - boundingbox.width/2
+
     ofSetColor(200, 10, 200);
     ofFill();
     ofDrawPlane((x+(width/2)),(y+(height/2)),width,height);
     ofSetColor(255, 255, 255);
-    buttonLabel.drawString(value, (x+10), (y+height-10));
-    //ofDrawBitmapString(value, (x+10), (y+height-10));
+	//Center the string
+	buttonLabel.drawString(value, ((x+(width/2)) - (buttonLabel.stringWidth(value)/2)), ((y+(height/2)) - (buttonLabel.stringHeight(value)/2)));
 }
 
 bool EyeButton::eyeOnButton(float eyeX, float eyeY) {

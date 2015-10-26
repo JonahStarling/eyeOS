@@ -3,8 +3,8 @@
 #include "ofMain.h"
 #include "EyeButton.h"
 #include "EyeCursor.h"
-#include "../stdafx.h" //Not found yet
-#include "../../include/eyex/EyeX.h"
+//#include "stdafx.h" //Not found yet
+#include "../include/eyex/EyeX.h"
 #include "eyeXHost.h"
 
 class ofApp : public ofBaseApp{
