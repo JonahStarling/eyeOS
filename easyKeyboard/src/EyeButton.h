@@ -23,11 +23,12 @@ private:
     float width;
     string value;
     bool clicked;
+	ofColor buttonColor;
     ofTrueTypeFont buttonLabel;
 public:
     //Constructors
     EyeButton();
-    EyeButton(float x, float y, float width, float height, string value, bool clicked);
+    EyeButton(float x, float y, float width, float height, string value, ofColor color);
     //Get
     float getX();
     float getY();
@@ -35,6 +36,7 @@ public:
     float getHeight();
     string getValue();
     bool getClicked();
+	ofColor getColor();
     //Set
     void setX(float x);
     void setY(float y);
@@ -42,6 +44,7 @@ public:
     void setHeight(float height);
     void setValue(string value);
     void setClicked(bool clicked);
+	void setColor(ofColor buttonColor);
     //Other Functions
     void redrawObject();
     bool eyeOnButton(float eyeX, float eyeY);

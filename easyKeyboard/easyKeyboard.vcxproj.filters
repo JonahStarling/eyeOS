@@ -11,6 +11,7 @@
     <ClCompile Include="src\EyeButtonGrid.cpp" />
     <ClCompile Include="src\EyeCursor.cpp" />
     <ClCompile Include="src\eyeXHost.cpp" />
+    <ClCompile Include="EyeOSColor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -25,6 +26,7 @@
     <ClInclude Include="src\EyeButton.h" />
     <ClInclude Include="src\EyeButtonGrid.h" />
     <ClInclude Include="src\EyeCursor.h" />
+    <ClInclude Include="EyeOSColor.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

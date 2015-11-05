@@ -90,6 +90,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EyeOSColor.cpp" />
     <ClCompile Include="src\EyeButton.cpp" />
     <ClCompile Include="src\EyeButtonGrid.cpp" />
     <ClCompile Include="src\EyeCursor.cpp" />
@@ -98,6 +99,7 @@
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EyeOSColor.h" />
     <ClInclude Include="src\EyeButton.h" />
     <ClInclude Include="src\EyeButtonGrid.h" />
     <ClInclude Include="src\EyeCursor.h" />

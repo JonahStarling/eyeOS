@@ -178,11 +178,11 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 #ifdef _WIN32
-    posX = eyex.gazePoint.x*.005+posX*.995; //***COMMENT OUT ON MAC***
-    posY = eyex.gazePoint.y*.005+posY*.995; //***COMMENT OUT ON MAC***
+	posX = eyex.gazePoint.x*.005+posX*.995;
+	posY = eyex.gazePoint.y*.005+posY*.995;
 #else
-	posX = mouseX; //***COMMENT OUT ON WIN***
-	posY = mouseY; //***COMMENT OUT ON WIN***
+	posX = mouseX;
+	posY = mouseY; 
 #endif
 }
 

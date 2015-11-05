@@ -15,19 +15,20 @@ EyeButton::EyeButton():
     width(0),
     height(0),
     value(""),
-    clicked(false)
+	buttonColor(eyeOSColors.lightBlue)
 {
-    //
+    clicked = false;
 }
 
-EyeButton::EyeButton(float x, float y, float width, float height, string value, bool clicked):
+EyeButton::EyeButton(float x, float y, float width, float height, string value, ofColor color):
     x(x),
     y(y),
     width(width),
     height(height),
     value(value),
-    clicked(clicked)
+	buttonColor(color)
 {
+	clicked = false;
     buttonLabel.loadFont("arial.ttf", 32);
 }
 
@@ -39,6 +40,7 @@ float EyeButton::getWidth() {return width;}
 float EyeButton::getHeight() {return height;}
 string EyeButton::getValue() {return value;}
 bool EyeButton::getClicked() {return clicked;}
+ofColor EyeButton::getColor() {return buttonColor;}
 
 
 //Set
@@ -48,6 +50,7 @@ void EyeButton::setWidth(float newWidth) {width = newWidth;}
 void EyeButton::setHeight(float newHeight) {height = newHeight;}
 void EyeButton::setValue(string newValue) {value = newValue;}
 void EyeButton::setClicked(bool newClick) {clicked = newClick;}
+void EyeButton::setColor(ofColor newColor) {buttonColor = newColor;}
 
 
 //Other Functions
