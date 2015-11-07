@@ -14,14 +14,11 @@
 using namespace std;
 
 class EyeOSColor {
-private:
-	ofColor currentColor;
-	ofColor lightBlue;
-	ofColor lightTeal;
 public:
-	EyeOSColor(void);
-	~EyeOSColor(void);
-	void setColorValues();
+    ofColor lightBlue;
+    ofColor lightTeal;
+	EyeOSColor(void); //Not Used
+	~EyeOSColor(void); //Not Used
 };
 
 #endif /* defined(__easyKeyboard__EyeButton__) */
